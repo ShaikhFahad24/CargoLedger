@@ -1,0 +1,24 @@
+{
+  "name": "speedcold-bill-manager",
+  "version": "1.0.0",
+  "description": "Local bill management software for SPEEDCOLD LOGISTIC - create, edit, search, print and download logistics bills as A4 PDFs.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/run-all.mjs",
+    "test:api": "node test/api.test.mjs",
+    "test:ui": "node test/ui.test.mjs",
+    "test:layout": "node test/layout.test.mjs"
+  },
+  "keywords": [
+    "billing",
+    "invoice",
+    "logistics",
+    "pdf"
+  ],
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^4.22.3",
+    "puppeteer-core": "^23.11.1"
+  }
+}

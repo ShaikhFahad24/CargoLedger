@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Speedcold Bill Manager</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="loginScreen" class="login-screen" hidden>
+    <div class="login-card">
+      <div class="brand-mark">S</div>
+      <h2>Speedcold Bill Manager</h2>
+      <div class="sub">Sign in to manage bills &amp; accounts</div>
+      <form id="loginForm" autocomplete="on">
+        <div class="field">
+          <label>Username</label>
+          <input type="text" id="loginUser" autocomplete="username" autocapitalize="none" spellcheck="false" autofocus>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" id="loginPass" autocomplete="current-password">
+        </div>
+        <div class="login-err" id="loginErr" role="alert"></div>
+        <button class="btn primary" type="submit" id="loginBtn">Sign in</button>
+      </form>
+      <div class="hint" style="margin-top:14px;text-align:center">Local app &middot; data never leaves this computer</div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">S</div>
+        <div>
+          <div class="brand-name">Speedcold Bill Manager</div>
+          <div class="brand-sub">Logistics billing &amp; accounts</div>
+        </div>
+      </div>
+      <nav id="nav">
+        <a href="#/dashboard" data-route="dashboard">
+          <span class="ico">▦</span> Dashboard</a>
+        <a href="#/bills" data-route="bills">
+          <span class="ico">▤</span> Bills <span class="badge" id="billCountBadge"></span></a>
+        <a href="#/customers" data-route="customers">
+          <span class="ico">☺</span> Customers</a>
+        <a href="#/vehicles" data-route="vehicles">
+          <span class="ico">▣</span> Vehicles</a>
+        <a href="#/users" data-route="users">
+          <span class="ico">👥</span> Users</a>
+        <a href="#/reports" data-route="reports">
+          <span class="ico">↗</span> Reports</a>
+        <a href="#/settings" data-route="settings">
+          <span class="ico">⚙</span> Company Settings</a>
+        <a href="#/backup" data-route="backup">
+          <span class="ico">⇅</span> Backup &amp; Restore</a>
+      </nav>
+      <div class="side-foot">Local data &middot; offline ready</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 id="pageTitle">Dashboard</h1>
+          <div class="crumb" id="pageCrumb">Overview of your billing</div>
+        </div>
+        <div class="top-actions">
+          <span class="who" id="whoAmI"></span>
+          <button class="btn ghost" id="logoutBtn">Logout</button>
+          <button class="btn primary" id="quickNewBill">+ New Bill</button>
+        </div>
+      </header>
+      <section id="view" class="view"></section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <div id="modalRoot"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
