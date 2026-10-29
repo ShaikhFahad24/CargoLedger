@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Speedcold Bill Manager
 
 Local, offline web application for creating, editing, searching, printing and downloading
@@ -96,3 +97,7 @@ test/              automated test suites
 - Deleting `data/` resets everything and re-seeds the SPEEDCOLD profile, sample bill 646 **and the default `fahad` user**.
 - Every `/api/*` route except `/api/auth/login` requires a valid session (session cookie `sid`,
   or an `Authorization: Bearer <token>` header for scripts).
+=======
+# CargoLedger
+A modern Transport Billing Management System designed to simplify transport operations, manage billing records, generate invoices, track payments, and maintain accurate financial transactions through an organized and user-friendly platform.
+>>>>>>> 85eb0720593f4890caf5884106c4d0d5b13a70ce
